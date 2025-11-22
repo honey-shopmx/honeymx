@@ -11,7 +11,6 @@
       --accent: #d4b17a;
       --card: #2a2a2a;
     }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
@@ -21,26 +20,18 @@
     header {
       background: var(--card);
       padding: 12px 16px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
       border-bottom: 1px solid var(--accent);
-    }
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      text-decoration: none;
     }
     .header-logo {
-      width: 40px;   /* tamaño fijo del logo */
+      width: 40px;
       height: 40px;
       border-radius: 50%;
       object-fit: cover;
@@ -55,7 +46,6 @@
       color: var(--text);
       text-decoration: none;
       margin-left: 12px;
-      font-size: 14px;
     }
     main {
       max-width: 1100px;
@@ -69,9 +59,12 @@
     }
     .card {
       background: var(--card);
-      border-radius: 10px;
-      overflow: hidden;
       border: 1px solid var(--accent);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 320px; /* altura fija para simetría */
     }
     .card img {
       width: 100%;
@@ -79,7 +72,11 @@
       object-fit: cover;
     }
     .card-content {
-      padding: 12px 14px;
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .price {
       font-weight: bold;
@@ -87,20 +84,13 @@
     }
     .btn {
       display: inline-block;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
       background: var(--accent);
       color: var(--bg);
       font-weight: bold;
-      cursor: pointer;
-      margin-top: 8px;
       text-decoration: none;
-    }
-    .btn.outline {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
+      text-align: center;
     }
     .logo-fixed {
       position: fixed;
@@ -110,127 +100,102 @@
       height: 80px;
       border-radius: 50%;
       object-fit: cover;
-      z-index: 100;
       border: 1px solid var(--accent);
       box-shadow: 0 4px 16px rgba(0,0,0,0.4);
     }
     footer {
-      margin: 40px 0 24px;
       text-align: center;
+      margin: 40px 0 20px;
       font-size: 13px;
       color: var(--text);
     }
-
-    .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* fuerza simetría */
-  height: 320px; /* altura fija para todas las tarjetas */
-}
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover; /* recorta la imagen sin deformarla */
-}
-.card-content {
-  flex: 1;
-  padding: 12px 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
   </style>
 </head>
 <body>
- <header>
-  <div class="header-inner">
+  <header>
     <a class="brand" href="#catalogo">
-      <img src="imagenes/logo-honey.jpeg" alt="Logo Honey Shop" class="header-logo">
+      <img src="imagenes/logo-honey.jpg" alt="Logo Honey Shop" class="header-logo">
       <span class="brand-name">Honey Shop</span>
     </a>
     <nav>
       <a href="#catalogo">Catálogo</a>
       <a href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<!-- Ejemplo de tarjeta simétrica -->
-<article class="card">
-  <img src="imagenes/nike-b2.png" alt="Nike Court Vision Low">
-  <div class="card-content">
-    <strong>Nike Court Vision Low Originales</strong>
-    <span class="price">$1499 MXN</span>
-    <small>Tenis originales estilo urbano.</small>
-    <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
-  </div>
-</article>
-
+  <main>
+    <section id="catalogo">
+      <h2>Productos</h2>
+      <div class="grid">
+        <!-- Producto 1 -->
         <article class="card">
-          <img src="imagenes/nike n2.png" alt="Pantalón Cargo">
+          <img src="imagenes/nike-b2.png" alt="Nike Court Vision Low">
           <div class="card-content">
-            <strong>Nike Erbernon Low Originales</strong>
-            <span class="price">$1199 MXN</span>
-            <small>Tenis deportivos casuales.</small><br>
+            <strong>Nike Court Vision Low Originales</strong>
+            <span class="price">$1499 MXN</span>
+            <small>Tenis originales estilo urbano.</small>
             <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
           </div>
         </article>
-
+        <!-- Producto 2 -->
         <article class="card">
-          <img src="imagenes/gorra n1.png" alt="Gorra Honey">
+          <img src="imagenes/nike-n2.png" alt="Nike Erbernon Low">
+          <div class="card-content">
+            <strong>Nike Erbernon Low Originales</strong>
+            <span class="price">$1199 MXN</span>
+            <small>Tenis deportivos casuales.</small>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+        <!-- Producto 3 -->
+        <article class="card">
+          <img src="imagenes/gorra-n1.png" alt="Gorra de béisbol">
           <div class="card-content">
             <strong>Gorra de béisbol 1.1</strong>
             <span class="price">Sold Out</span>
             <small>Edición limitada.</small>
           </div>
         </article>
-
+        <!-- Producto 4 -->
         <article class="card">
           <img src="imagenes/dron.png" alt="Dron con cámara">
           <div class="card-content">
             <strong>Dron con cámara</strong>
             <span class="price">$449 MXN</span>
-            <small>Ideal para fotos aéreas.</small><br>
+            <small>Ideal para fotos aéreas.</small>
             <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
           </div>
         </article>
-
+        <!-- Producto 5 -->
         <article class="card">
           <img src="imagenes/carrocontrol.png" alt="Carro de control remoto">
           <div class="card-content">
             <strong>Carro de control remoto</strong>
             <span class="price">$349 MXN</span>
-            <small>Divertido y resistente.</small><br>
+            <small>Divertido y resistente.</small>
             <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
           </div>
         </article>
-
+        <!-- Producto 6 -->
         <article class="card">
           <img src="imagenes/audifonos.jpeg" alt="Audífonos OEM">
           <div class="card-content">
             <strong>Audífonos OEM</strong>
             <span class="price">$499 MXN</span>
-            <small>Sonido envolvente.</small><br>
+            <small>Sonido envolvente.</small>
             <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
           </div>
         </article>
-
+        <!-- Producto 7 -->
         <article class="card">
           <img src="imagenes/pistola.png" alt="Pistola de juguete">
           <div class="card-content">
             <strong>Pistola</strong>
             <span class="price">$399 MXN</span>
-            <small>Juguete seguro.</small><br>
+            <small>Juguete seguro.</small>
             <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
           </div>
         </article>
-
-        <article class="card">
-          <img src="imagenes/gorra g1.png" alt="Gorra de gamuza">
-          <div class="card-content">
-            <strong>Gorra de gamuza</strong>
-            <span class="price">$249 MXN</span>
-            <
+        <!-- Producto 8 -->
 
 
