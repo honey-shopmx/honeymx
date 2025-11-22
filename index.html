@@ -64,7 +64,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 320px; /* altura fija para simetría */
+      height: 320px; /* altura fija */
     }
     .card img {
       width: 100%;
@@ -109,54 +109,6 @@
       font-size: 13px;
       color: var(--text);
     }
-
-    /* Fuerza simetría en las tarjetas */
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 320px; /* todas iguales */
-  background: var(--card);
-  border: 1px solid var(--accent);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* Imágenes recortadas y uniformes */
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover; /* recorta sin deformar */
-}
-
-/* Contenido alineado */
-.card-content {
-  flex: 1;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Logo controlado */
-.header-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--accent);
-}
-.logo-fixed {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--accent);
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
-
   </style>
 </head>
 <body>
@@ -167,7 +119,6 @@
     </a>
     <nav>
       <a href="#catalogo">Catálogo</a>
-      <a href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
     </nav>
   </header>
 
@@ -176,21 +127,15 @@
       <h2>Productos</h2>
       <div class="grid">
         <!-- Producto 1 -->
-    <article class="card">
-  <img src="imagenes/nike b2.png" alt="Nike Court Vision Low">
-  <div class="card-content">
-    <strong>Nike Court Vision Low Originales</strong>
-    <span class="price">$1499 MXN</span>
-    <small>Tenis originales estilo urbano.</small>
-    <a class="btn" 
-       href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Court%20Vision%20Low%20Originales%20Link:%20https://www.tusitio.com/producto/nike-b2" 
-       target="_blank">
-       Comprar
-    </a>
-  </div>
-</article>
-
-
+        <article class="card">
+          <img src="imagenes/nike b2.png" alt="Nike Court Vision Low">
+          <div class="card-content">
+            <strong>Nike Court Vision Low Originales</strong>
+            <span class="price">$1499 MXN</span>
+            <small>Tenis originales estilo urbano.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Court%20Vision%20Low%20Originales%20Link:%20https://tusitio.com/producto/nike-b2" target="_blank">Comprar</a>
+          </div>
+        </article>
         <!-- Producto 2 -->
         <article class="card">
           <img src="imagenes/nike n2.png" alt="Nike Erbernon Low">
@@ -198,7 +143,7 @@
             <strong>Nike Erbernon Low Originales</strong>
             <span class="price">$1199 MXN</span>
             <small>Tenis deportivos casuales.</small>
-            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Erbernon%20Low%20Originales%20Link:%20https://tusitio.com/producto/nike-n2" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 3 -->
@@ -208,6 +153,7 @@
             <strong>Gorra de béisbol 1.1</strong>
             <span class="price">Sold Out</span>
             <small>Edición limitada.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20informacion%20sobre%20la%20Gorra%20de%20beisbol%201.1%20Link:%20https://tusitio.com/producto/gorra-n1" target="_blank">Consultar</a>
           </div>
         </article>
         <!-- Producto 4 -->
@@ -217,7 +163,7 @@
             <strong>Dron con cámara</strong>
             <span class="price">$449 MXN</span>
             <small>Ideal para fotos aéreas.</small>
-            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Dron%20con%20camara%20Link:%20https://tusitio.com/producto/dron" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 5 -->
@@ -227,7 +173,7 @@
             <strong>Carro de control remoto</strong>
             <span class="price">$349 MXN</span>
             <small>Divertido y resistente.</small>
-            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Carro%20de%20control%20remoto%20Link:%20https://tusitio.com/producto/carrocontrol" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 6 -->
@@ -237,7 +183,7 @@
             <strong>Audífonos OEM</strong>
             <span class="price">$499 MXN</span>
             <small>Sonido envolvente.</small>
-            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Audifonos%20OEM%20Link:%20https://tusitio.com/producto/audifonos" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 7 -->
@@ -247,10 +193,7 @@
             <strong>Pistola</strong>
             <span class="price">$399 MXN</span>
             <small>Juguete seguro.</small>
-            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
-          </div>
-        </article>
-        <!-- Producto 8 -->
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20la%20Pistola%20de%20juguete%20Link:%20https://tusitio.com/producto/pistola" target="_blank
 
 
 
