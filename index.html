@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Honey Shop – Urban Clothing</title>
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --text: #f5f0e6;
+      --accent: #d4b17a;
+      --card: #2a2a2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--card);
+      padding: 12px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--accent);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .header-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--accent);
+    }
+    .brand-name {
+      font-size: 18px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 12px;
+      font-size: 14px;
+    }
+    main {
+      max-width: 1100px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--accent);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 12px 14px;
+    }
+    .price {
+      font-weight: bold;
+      color: var(--accent);
+    }
+    .btn {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: none;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+    .btn.outline {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+    .logo-fixed {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      z-index: 100;
+      border: 1px solid var(--accent);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    footer {
+      margin: 40px 0 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="#catalogo">
+        <img src="imagenes/logo-honey.JPEG" alt="Logo Honey Shop" class="header-logo">
+        <span class="brand-name">Honey Shop</span>
+      </a>
+      <nav>
+        <a href="#catalogo">Catálogo</a>
+        <a href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="catalogo">
+      <h2>Productos</h2>
+      <div class="grid">
+        <!-- 8 productos -->
+        <article class="card">
+          <img src="imagenes/nike b2.png" alt="Sudadera Oversize">
+          <div class="card-content">
+            <strong>niike court vision low originales</strong>
+            <span class="price">$1499 MXN</span>
+            <small>......</small><br>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/nike n2.png" alt="Pantalón Cargo">
+          <div class="card-content">
+            <strong>nike erbernon low originales</strong>
+            <span class="price">$1199 MXN</span>
+            <small>.....</small><br>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/gorra n1.png" alt="Gorra Honey">
+          <div class="card-content">
+            <strong>Gorra de beisbol 1.1</strong>
+            <span class="price">$799 MXN</span>
+            <small>......</small><br>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/dron.png" alt="Playera Beige">
+          <div class="card-content">
+            <strong>dron con camara</strong>
+            <span class="price">$449 MXN</span>
+            <small>......</small><br>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/carrocontrol.png" alt="Chaqueta Negra">
+          <div class="card-content">
+            <strong>carro de control remoto</strong>
+            <span class="price">$349 MXN</span>
+            <small>......</small><br>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/audifonos.jpeg" alt="Shorts Urban">
+          <div class="card-content">
+            <strong>audifonos oem</strong>
+            <span class="price">$499 MXN</span>
+            <small>.................</small><br>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/pistola.png" alt="Tenis Beige">
+          <div class="card-content">
+            <strong>pistola</strong>
+            <span class="price">$399 MXN</span>
+            <small>......</small><br>
+            <a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+  <article class="card">
+          <img src="imagenes/gorra g1.png" alt="Tenis Beige">
+          <div class="card-content">
+            <strong>gorra de gamuza</strong>
+            <span class="price">$249 MXN</span>
+            <small>.....</small><br>
+            
+<a class="btn" href="https://www.instagram.com/honey__shopmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Comprar</a>
+          </div>
+        </article>
+
+        <article class
