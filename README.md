@@ -1,5 +1,4 @@
-# honeymx
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -93,17 +92,6 @@
       text-decoration: none;
       text-align: center;
     }
-    .logo-fixed {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--accent);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-    }
     footer {
       text-align: center;
       margin: 40px 0 20px;
@@ -134,7 +122,7 @@
             <strong>Nike Court Vision Low Originales</strong>
             <span class="price">$1499 MXN</span>
             <small>Tenis originales estilo urbano.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Court%20Vision%20Low%20Originales%20Link:%20https://tusitio.com/producto/nike-b2" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Court%20Vision%20Low%20Originales" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 2 -->
@@ -144,7 +132,7 @@
             <strong>Nike Erbernon Low Originales</strong>
             <span class="price">$1199 MXN</span>
             <small>Tenis deportivos casuales.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Erbernon%20Low%20Originales%20Link:%20https://tusitio.com/producto/nike-n2" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Erbernon%20Low%20Originales" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 3 -->
@@ -154,7 +142,7 @@
             <strong>Gorra de béisbol 1.1</strong>
             <span class="price">Sold Out</span>
             <small>Edición limitada.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20informacion%20sobre%20la%20Gorra%20de%20beisbol%201.1%20Link:%20https://tusitio.com/producto/gorra-n1" target="_blank">Consultar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20informacion%20sobre%20la%20Gorra%20de%20beisbol%201.1" target="_blank">Consultar</a>
           </div>
         </article>
         <!-- Producto 4 -->
@@ -164,7 +152,7 @@
             <strong>Dron con cámara</strong>
             <span class="price">Sold Out</span>
             <small>Ideal para fotos aéreas.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Dron%20con%20camara%20Link:%20https://tusitio.com/producto/dron" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Dron%20con%20camara" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 5 -->
@@ -174,7 +162,7 @@
             <strong>Carro de control remoto</strong>
             <span class="price">$349 MXN</span>
             <small>Divertido y resistente.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Carro%20de%20control%20remoto%20Link:%20https://tusitio.com/producto/carrocontrol" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Carro%20de%20control%20remoto" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 6 -->
@@ -184,7 +172,7 @@
             <strong>Audífonos OEM</strong>
             <span class="price">$499 MXN</span>
             <small>Sonido envolvente.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Audifonos%20OEM%20Link:%20https://tusitio.com/producto/audifonos" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Audifonos%20OEM" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 7 -->
@@ -194,8 +182,20 @@
             <strong>Pistola</strong>
             <span class="price">$399 MXN</span>
             <small>Juguete seguro.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20la%20Pistola%20de%20juguete%20Link:%20https://tusitio.com/producto/pistola" target="_blank">Comprar</a>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20la%20Pistola%20de%20juguete" target="_blank">Comprar</a>
           </div>
         </article>
         <!-- Producto 8 -->
-        <article class="card
+        <article class="card">
+          <img src="imagenes/gorra-n1.png" alt="Gorra de béisbol 1.1">
+          <div class="card-content">
+            <strong>Gorra de béisbol 1.1</strong>
+            <span class="price">$800 MXN</span>
+            <small>Preventa disponible: $200 MXN.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20apartar%20la%20Gorra%20de%20beisbol%201.1%20en%20preventa" target="_blank">Preventa</a>
+          </div>
+        </article>
+        <!-- Producto 9 -->
+        <article class="card">
+          <img src="imagenes/gorra-n1.png" alt="Gorra de béisbol 1.1">
+          <div class="
