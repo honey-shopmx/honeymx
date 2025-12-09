@@ -11,12 +11,15 @@
       --accent: #d4b17a;
       --card: #2a2a2a;
     }
+
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
+      line-height: 1.5;
     }
+
     header {
       background: var(--card);
       padding: 12px 16px;
@@ -25,11 +28,14 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
+      text-decoration: none;
     }
+
     .header-logo {
       width: 40px;
       height: 40px;
@@ -37,51 +43,82 @@
       object-fit: cover;
       border: 1px solid var(--accent);
     }
+
     .brand-name {
       font-size: 18px;
       color: var(--accent);
       font-weight: bold;
     }
+
     nav a {
       color: var(--text);
       text-decoration: none;
       margin-left: 12px;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
     main {
       max-width: 1100px;
       margin: 24px auto;
       padding: 0 16px;
     }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
     }
+
     .card {
       background: var(--card);
       border: 1px solid var(--accent);
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 320px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
     }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
     .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
+
     .card-content {
       padding: 12px;
-      flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 6px;
     }
+
+    .card-content strong {
+      font-size: 16px;
+    }
+
     .price {
       font-weight: bold;
       color: var(--accent);
     }
+
+    .subprice {
+      font-size: 13px;
+      color: #d9c7a3;
+    }
+
     .btn {
       display: inline-block;
       padding: 8px 12px;
@@ -91,7 +128,14 @@
       font-weight: bold;
       text-decoration: none;
       text-align: center;
+      transition: background 0.3s ease;
+      margin-top: 6px;
     }
+
+    .btn:hover {
+      background: #c49a5f;
+    }
+
     footer {
       text-align: center;
       margin: 40px 0 20px;
@@ -102,8 +146,8 @@
 </head>
 <body>
   <header>
-    <a class="brand" href="#catalogo">
-      <img src="imagenes/logo-honey.jpg" alt="Logo Honey Shop" class="header-logo">
+    <a class="brand" href="#catalogo" aria-label="Ir al catálogo">
+      <img src="imagenes/logo-honey.jpg" alt="Logo de Honey Shop" class="header-logo">
       <span class="brand-name">Honey Shop</span>
     </a>
     <nav>
@@ -117,27 +161,29 @@
       <div class="grid">
         <!-- Producto 1 -->
         <article class="card">
-          <img src="imagenes/nike b2.png" alt="Nike Court Vision Low">
+          <img src="imagenes/nike b2.png" alt="Nike Court Vision Low Originales">
           <div class="card-content">
             <strong>Nike Court Vision Low Originales</strong>
-            <span class="price">$1499 MXN</span>
+            <span class="price">$1349 MXN</span>
             <small>Tenis originales estilo urbano.</small>
             <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Court%20Vision%20Low%20Originales" target="_blank">Comprar</a>
           </div>
         </article>
+
         <!-- Producto 2 -->
         <article class="card">
-          <img src="imagenes/nike n2.png" alt="Nike Erbernon Low">
+          <img src="imagenes/nike n2.png" alt="Nike Erbernon Low Originales">
           <div class="card-content">
             <strong>Nike Erbernon Low Originales</strong>
-            <span class="price">$1199 MXN</span>
+            <span class="price">$999 MXN</span>
             <small>Tenis deportivos casuales.</small>
             <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Nike%20Erbernon%20Low%20Originales" target="_blank">Comprar</a>
           </div>
         </article>
+
         <!-- Producto 3 -->
         <article class="card">
-          <img src="imagenes/gorra n1.png" alt="Gorra de béisbol">
+          <img src="imagenes/gorra n1.png" alt="Gorra de béisbol edición limitada">
           <div class="card-content">
             <strong>Gorra de béisbol 1.1</strong>
             <span class="price">Sold Out</span>
@@ -145,36 +191,20 @@
             <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20informacion%20sobre%20la%20Gorra%20de%20beisbol%201.1" target="_blank">Consultar</a>
           </div>
         </article>
-        <!-- Producto 4 -->
-        <article class="card">
-          <img src="imagenes/dron.png" alt="Dron con cámara">
-          <div class="card-content">
-            <strong>Dron con cámara</strong>
-            <span class="price">Sold Out</span>
-            <small>Ideal para fotos aéreas.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Dron%20con%20camara" target="_blank">Comprar</a>
-          </div>
-        </article>
-        <!-- Producto 5 -->
-        <article class="card">
-          <img src="imagenes/carrocontrol.png" alt="Carro de control remoto">
-          <div class="card-content">
-            <strong>Carro de control remoto</strong>
-            <span class="price">$349 MXN</span>
-            <small>Divertido y resistente.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20el%20Carro%20de%20control%20remoto" target="_blank">Comprar</a>
-          </div>
-        </article>
+
+        
+       
         <!-- Producto 6 -->
         <article class="card">
           <img src="imagenes/audifonos.jpeg" alt="Audífonos OEM">
           <div class="card-content">
             <strong>Audífonos OEM</strong>
-            <span class="price">$499 MXN</span>
+            <span class="price">$350 MXN</span>
             <small>Sonido envolvente.</small>
             <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20los%20Audifonos%20OEM" target="_blank">Comprar</a>
           </div>
         </article>
+
         <!-- Producto 7 -->
         <article class="card">
           <img src="imagenes/pistola.png" alt="Pistola de juguete">
@@ -185,20 +215,78 @@
             <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20comprar%20la%20Pistola%20de%20juguete" target="_blank">Comprar</a>
           </div>
         </article>
+
         <!-- Producto 8 -->
         <article class="card">
-          <img src="imagenes/gorra-n1.png" alt="Gorra de béisbol 1.1">
+          <img src="imagenes/murakami b.jpeg" alt="Gorra de béisbol 1.1 preventa">
           <div class="card-content">
             <strong>Gorra de béisbol 1.1</strong>
             <span class="price">$800 MXN</span>
-            <small>Preventa disponible: $200 MXN.</small>
-            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20apartar%20la%20Gorra%20de%20beisbol%201.1%20en%20preventa" target="_blank">Preventa</a>
+            <span class="subprice">Preventa: $200 MXN</span>
+            <small>Aparta con $200 y asegura la tuya.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20apartar%20la%20Gorra%20de%20beisbol%201.1%20en%20preventa%20por%20$200" target="_blank">Preventa</a>
           </div>
         </article>
-        <!-- Producto 9 -->
+
+        <!-- Producto 9: Gorra preventa -->
         <article class="card">
-          <img src="imagenes/gorra-n1.png" alt="Gorra de béisbol 1.1">
-          <div class="
+          <img src="imagenes/skate b.png" alt="Gorra de béisbol 1.1 preventa ">
+          <div class="card-content">
+            <strong>Gorra de béisbol 1.1 – Preventa A</strong>
+            <span class="price">$800 MXN</span>
+            <span class="subprice">Preventa: $200 MXN</span>
+            <small>Aparta con $200 y paga el resto al entregar.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20apartar%20la%20Gorra%20de%20beisbol%201.1%20model%20A%20en%20preventa%20por%20$200" target="_blank">Preventa</a>
+          </div>
+        </article>
+
+        <!-- Producto 10: Gorra preventa -->
+        <article class="card">
+          <img src="imagenes/new york.png" alt="Gorra de béisbol 1.1 preventa ">
+          <div class="card-content">
+            <strong>Gorra de béisbol 1.1 – Preventa B</strong>
+            <span class="price">$800 MXN</span>
+            <span class="subprice">Preventa: $200 MXN</span>
+            <small>Aparta con $200. Entrega garantizada en preventa.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20apartar%20la%20Gorra%20de%20beisbol%201.1%20model%20B%20en%20preventa%20por%20$200" target="_blank">Preventa</a>
+          </div>
+        </article>
+
+        <!-- Producto 11: Gorra preventa -->
+        <article class="card">
+          <img src="imagenes/clave ali.png" alt="Gorra de béisbol 1.1 preventa ">
+          <div class="card-content">
+            <strong>Gorra de béisbol 1.1 – Preventa C</strong>
+            <span class="price">$800 MXN</span>
+            <span class="subprice">Preventa: $200 MXN</span>
+            <small>Aparta con $200 y recibe prioridad de entrega.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20apartar%20la%20Gorra%20de%20beisbol%201.1%20model%20C%20en%20preventa%20por%20$200" target="_blank">Preventa</a>
+          </div>
+        </article>
+
+        <!-- Producto 12: Gorra preventa -->
+        <article class="card">
+          <img src="imagenes/new york s.png" alt="Gorra de béisbol 1.1 preventa ">
+          <div class="card-content">
+            <strong>Gorra de béisbol 1.1 – Preventa D</strong>
+            <span class="price">$800 MXN</span>
+            <span class="subprice">Preventa: $200 MXN</span>
+            <small>Reserva con $200. Stock limitado en preventa.</small>
+            <a class="btn" href="https://wa.me/5216461481411?text=Hola%20quiero%20apartar%20la%20Gorra%20de%20beisbol%201.1%20model%20D%20en%20preventa%20por%20$200" target="_blank">Preventa</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Honey Shop – Urban Clothing. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+
 
 
 
