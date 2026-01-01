@@ -123,6 +123,25 @@
 .instagram-icon:hover {
   transform: scale(1.1);
 }
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: stretch; /* fuerza que todas las celdas se estiren */
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distribuye contenido */
+  height: 100%; /* asegura altura uniforme */
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
 
   </style>
 </head>
@@ -322,6 +341,7 @@
           
           
        
+
 
 
 
